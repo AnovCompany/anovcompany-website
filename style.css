@@ -203,6 +203,8 @@ h2 {
   max-width: 500px;
   display: flex;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .sobre-imagem img {
@@ -238,6 +240,7 @@ h2 {
   color: var(--preto);
 }
 
+
 @media (max-width: 1024px) {
   .sobre-container {
     flex-direction: column;
@@ -264,6 +267,28 @@ h2 {
     max-width: 90%;
   }
 }
+
+@media (max-width: 768px) {
+  .sobre-imagem {
+    display: none;
+  }
+
+  .sobre-texto {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .sobre-titulo {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+
+  .sobre-desc {
+    text-align: center;
+    font-size: 1.05rem;
+  }
+}
+
 
 @media (max-width: 480px) {
   .sobre-titulo {
