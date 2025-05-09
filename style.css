@@ -170,7 +170,6 @@ header p {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 1.5rem;
 }
 
 h2 {
@@ -178,6 +177,106 @@ h2 {
   margin-bottom: 2rem;
   color: var(--preto);
   text-align: center;
+}
+
+/* ===== SOBRE A ANOV ===== */
+
+.sobre-anov {
+  padding: 80px 20px;
+  background-color: #fff;
+  color: var(--preto);
+}
+
+.sobre-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sobre-imagem {
+  flex: 1 1 400px;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.sobre-imagem img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 0 20px #00000015;
+}
+
+.sobre-texto {
+  flex: 1 1 500px;
+}
+
+.sobre-titulo {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: var(--azul);
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.sobre-desc {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--cinza-escuro);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.sobre-desc strong {
+  color: var(--preto);
+}
+
+@media (max-width: 1024px) {
+  .sobre-container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .sobre-texto, .sobre-imagem {
+    max-width: 100%;
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .sobre-titulo {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+
+  .sobre-desc {
+    text-align: center;
+    font-size: 1.05rem;
+  }
+
+  .sobre-imagem img {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-titulo {
+    font-size: 1.8rem;
+  }
+
+  .sobre-desc {
+    font-size: 1rem;
+  }
+
+  .sobre-anov {
+    padding: 60px 10px;
+  }
 }
 
 /* ===== SERVIÇOS ===== */
