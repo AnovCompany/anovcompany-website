@@ -1,5 +1,15 @@
 const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+const menu = document.querySelector('.overlay-menu');
+const links = document.querySelectorAll('.overlay-menu a');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  menu.classList.toggle('active');
+});
+
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    menu.classList.remove('active');
+  });
 });

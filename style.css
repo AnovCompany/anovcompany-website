@@ -73,7 +73,6 @@ nav .logo {
   color: var(--azul);
 }
 
-/* Botão Contrate */
 .btn-contrate {
   background-color: var(--azul);
   color: white;
@@ -106,14 +105,103 @@ nav .logo {
 .nav-links.active {
   position: absolute;
   top: 70px;
-  left: 0;
   right: 0;
+  width: 60%;
+  border-bottom-left-radius: 10px; 
   background-color: black;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
   padding: 1rem 0;
   display: flex;
+}
+
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+  z-index: 999;
+}
+
+.overlay-menu.active {
+  transform: translateY(0);
+}
+
+.overlay-menu ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.overlay-menu ul li {
+  margin: 1.5rem 0;
+}
+
+.overlay-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+
+.overlay-menu ul li a:hover {
+  color: #ff4d4d; 
+}
+
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  gap: 6px;
+  background: transparent;
+  border: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.4s ease;
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(48deg);
+  position: absolute;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-48deg);
+  position: absolute;
+}
+
+@media (min-width: 850px) {
+  .hamburger,
+  .overlay-menu {
+    display: none !important;
+  }
 }
 
 /* ===== HEADER ===== */
@@ -625,6 +713,10 @@ footer .copy {
 /* ===== RESPONSIVO ===== */
 @media (max-width: 850px) {
   .btn-contrate {
+    display: none;
+  }
+
+  .nav-links{
     display: none;
   }
 
