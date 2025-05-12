@@ -195,6 +195,7 @@ h2 {
   justify-content: center;
   gap: 50px;
   max-width: 1200px;
+  border-radius: 16px;
   margin: 0 auto;
 }
 
@@ -218,14 +219,25 @@ h2 {
 
 .sobre-texto {
   flex: 1 1 500px;
+  background: linear-gradient(to bottom, #f4f7fa, #ffffff);
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.sobre-texto p{
+  margin-bottom: 1rem;
 }
 
 .sobre-titulo {
   font-size: 2.8rem;
   font-weight: bold;
-  color: var(--azul);
   margin-bottom: 30px;
   text-align: left;
+}
+
+.texto-destaque{
+  color: #1f4e89;
 }
 
 .sobre-desc {
@@ -291,8 +303,8 @@ h2 {
 
 
 @media (max-width: 480px) {
-  .sobre-titulo {
-    font-size: 1.8rem;
+  .sobre-titulo, h2 {
+    font-size: 2.1rem;
   }
 
   .sobre-desc {
@@ -317,6 +329,8 @@ h2 {
   border-radius: 14px;
   padding: 2rem;
   text-align: center;
+  margin: 10px;
+  border: 2px solid #5BAADE;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s;
 }
