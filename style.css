@@ -355,13 +355,118 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
+/* ===== PERGUNTAS FREQUENTES (FAQ) ===== */
+
+.faq-section {
+  padding: 80px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.faq-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.faq-item {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  background-color: var(--azul-claro);
+  color: #fff;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #4895C9;
+}
+
+.faq-answer {
+  display: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #555;
+  background-color: #f8f8f8;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  transition: transform 0.3s ease;
+  margin-left: auto; 
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 60px 15px;
+  }
+
+  .faq-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .faq-question {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .faq-icon {
+    font-size: 1.2rem;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+    padding: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .faq-question {
+    font-size: 0.95rem;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+}
+
 /* ===== CONTATO ===== */
 .contato-section {
   padding: 1rem 1rem;
   background: linear-gradient(to right, #e6f0f3, #ffffff);
   border-top: 2px solid var(--verde);
   border-bottom: 2px solid var(--verde);
-  margin-top: 60px;
 }
 
 .contato-content {
@@ -386,22 +491,20 @@ h2 {
 
 .btn-contato {
   background-color: var(--verde);
-  color: #fff;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
+  color: white;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
   border: none;
   border-radius: 8px;
   text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.2s;
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  white-space: nowrap;
 }
 
 .btn-contato:hover {
-  background-color: #4e9aaf;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 480px) {
@@ -410,9 +513,11 @@ h2 {
   }
 
   .btn-contato {
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
     white-space: normal;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
