@@ -267,181 +267,279 @@ h2 {
   text-align: center;
 }
 
-/* ===== SOBRE A ANOV ===== */
-
+/* ===== SOBRE ===== */
 .sobre-anov {
   padding: 80px 20px;
-  background-color: #fff;
+  background:  #f0f4f8;
   color: var(--preto);
 }
 
 .sobre-container {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
-  gap: 50px;
   max-width: 1200px;
-  border-radius: 16px;
   margin: 0 auto;
+  gap: 40px;
 }
 
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.sobre-container {
-  animation: fadeIn 1s ease-in;
-}
-
-.sobre-imagem {
-  flex: 1 1 400px; 
-  height: auto;
+.sobre-imagem.desktop {
+  flex: 1 1 400px;
   display: flex;
   justify-content: center;
-  position: relative;
-  align-items: stretch;
-  overflow: hidden;
 }
 
-.sobre-imagem img {
-  width: 100%;
-  max-width: 100%;
-  height: auto; 
-  border-radius: 16px;
+.sobre-imagem.desktop img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 20px #00000015;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .sobre-texto {
   flex: 1 1 500px;
-  background: linear-gradient(135deg, #f0f4f8 0%, #ffffff 60%, #e9f2fb 100%);
-  padding: 16px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.sobre-texto p{
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .sobre-titulo {
   font-size: 2.8rem;
   font-weight: bold;
   color: var(--azul);
-  margin-bottom: 30px;
-  text-align: left;
+  margin-bottom: 24px;
 }
 
 .sobre-desc {
   font-size: 1.15rem;
   line-height: 1.7;
   color: var(--cinza-escuro);
-  margin-bottom: 20px;
-  text-align: left;
+  margin-bottom: 16px;
 }
 
 .sobre-desc strong {
   color: var(--preto);
 }
 
+.botao-whats-sobre {
+  display: inline-flex;
+  align-self: center;
+  justify-content: center;
+  background-color: #219653;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.botao-whats-sobre:hover {
+  background-color: #1e874a;
+  transform: translateY(-2px);
+}
+
+.sobre-imagem.mobile {
+  display: none;
+}
+
+.sobre-imagem.mobile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
 
 @media (max-width: 1024px) {
   .sobre-container {
-    flex-direction: column;
-    padding: 0 10px;
-  }
-
-  .sobre-texto, .sobre-imagem {
-    max-width: 100%;
-    flex: 1 1 100%;
+    flex-direction: column-reverse;
     text-align: center;
   }
 
-  .sobre-titulo {
-    text-align: center;
-    font-size: 2.2rem;
-  }
-
-  .sobre-desc {
-    text-align: center;
-    font-size: 1.05rem;
-  }
-
-  .sobre-imagem {
+  .sobre-imagem.desktop {
     display: none;
   }
-}
 
-@media (max-width: 768px) {
+  .sobre-imagem.mobile {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
 
-  .sobre-texto {
-    margin-top: 0;
-    text-align: center;
+  .sobre-imagem.mobile img {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .botao-whats-sobre {
+    align-self: center;
   }
 
   .sobre-titulo {
-    text-align: center;
     font-size: 2.2rem;
   }
 
   .sobre-desc {
-    text-align: center;
     font-size: 1.05rem;
   }
 }
 
-
 @media (max-width: 480px) {
-  .sobre-titulo, h2 {
-    font-size: 2.1rem;
+  .sobre-anov {
+    padding: 50px 15px;
+  }
+
+  .sobre-titulo {
+    font-size: 2rem;
   }
 
   .sobre-desc {
-    font-size: 1.05rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
-  .sobre-anov {
-    padding: 60px 10px;
+  .botao-whats-sobre {
+    width: 100%;
+    padding: 14px 0;
+  }
+
+  .sobre-imagem.mobile img {
+    max-width: 260px;
   }
 }
 
-/* ===== SERVIÇOS ===== */
-.grid {
+.servicos-section{
+  margin-top: 80px;
+}
+
+.titulo-servicos {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.titulo-servicos span {
+  color: #3b82f6; 
+}
+
+.subtitulo-servicos {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+.servicos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin: 0 20px;
-  justify-content: center;
+  padding: 0 20px;
 }
 
-.card {
-  background-color: var(--cinza-claro);
-  border-radius: 14px;
+.servico-card {
+  background-color: #f8fafc;
+  border-radius: 16px;
   padding: 2rem;
   text-align: center;
-  border: 2px solid #5BAADE;
+  border: 1px solid #e5e7eb;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servico-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.servico-card img {
+  width: 50px;
+  margin-bottom: 1.2rem;
+}
+
+.servico-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.servico-card p {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* ===== DIFERENCIAIS ===== */
+
+.diferenciais {
+  background-color: #111827;
+  padding: 4rem 1rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.diferenciais h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.diferenciais h2 span {
+  color: #3B82F6;
+}
+
+.diferenciais .subtitulo {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin-bottom: 2.5rem;
+}
+
+.diferenciais-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.diferencial-card {
+  display: flex;
+  background-color: #1e293b;
+  border-radius: 14px;
+  padding: 1.5rem;
+  gap: 1rem;
+  text-align: left;
+  border: 2px solid #3B82F6;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
   transition: transform 0.3s;
 }
 
-.card:hover {
+.diferencial-card:hover {
   transform: translateY(-6px);
 }
 
-.card img {
-  width: 60px;
-  margin-bottom: 1rem;
+.diferencial-card img {
+  width: 50px;
+  flex-shrink: 0;
 }
 
-.card h3 {
-  font-size: 1.4rem;
+.diferencial-card h3 {
   margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1.2rem;
 }
+
 
 /* ===== PERGUNTAS FREQUENTES (FAQ) ===== */
 
