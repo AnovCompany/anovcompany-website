@@ -258,6 +258,8 @@ header p {
 .cta-button:hover {
   background-color: var(--azul);
   color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* ===== CONTAINER GERAL ===== */
@@ -319,7 +321,7 @@ h2 {
 }
 
 .sobre-desc {
-  font-size: 1.15rem;
+  font-size: 1.21rem;
   line-height: 1.7;
   color: var(--cinza-escuro);
   margin-bottom: 16px;
@@ -408,7 +410,7 @@ h2 {
   }
 
   .sobre-desc {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.6;
   }
 
@@ -578,112 +580,6 @@ h2 {
     }
 }
 
-/* ===== PERGUNTAS FREQUENTES (FAQ) ===== */
-
-.faq-section {
-  padding: 80px 20px;
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: 10px;
-}
-
-.faq-section h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 2rem;
-}
-
-.faq-item {
-  background-color: #fff;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.faq-question {
-  width: 100%;
-  padding: 1.2rem;
-  font-size: 1.2rem;
-  background-color: var(--azul-claro);
-  color: #fff;
-  text-align: left;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.faq-question:hover {
-  background-color: #4895C9;
-}
-
-.faq-answer {
-  display: none;
-  padding: 1rem;
-  font-size: 1rem;
-  color: #555;
-  background-color: #f8f8f8;
-}
-
-.faq-item.active .faq-answer {
-  display: block;
-}
-
-.faq-icon {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #FFFFFF;
-  transition: transform 0.3s ease;
-  margin-left: auto; 
-  flex-shrink: 0;
-}
-
-@media (max-width: 768px) {
-  .faq-section {
-    padding: 60px 15px;
-  }
-
-  .faq-section h2 {
-    font-size: 1.7rem;
-  }
-
-  .faq-question {
-    padding: 1rem;
-    font-size: 1rem;
-  }
-
-  .faq-icon {
-    font-size: 1.2rem;
-  }
-
-  .faq-answer {
-    font-size: 0.95rem;
-    padding: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .faq-section h2 {
-    font-size: 1.5rem;
-  }
-
-  .faq-question {
-    font-size: 0.95rem;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .faq-answer {
-    font-size: 0.9rem;
-  }
-}
-
 /* ===== CONTATO ===== */
 .contato-section {
   padding: 1rem 1rem;
@@ -701,7 +597,7 @@ h2 {
 }
 
 .contato-content h2 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   margin-bottom: 0.5rem;
   color: white;
 }
@@ -736,7 +632,6 @@ h2 {
   }
 
   .btn-contato {
-    font-size: 0.9rem;
     padding: 0.75rem 1rem;
     white-space: normal;
     width: 100%;
@@ -780,7 +675,7 @@ h2 {
 footer {
   background: black;
   color: white;
-  padding: 3rem 1.5rem 2rem 1rem;
+  padding: 3rem 1.5rem 1rem 1rem;
   width: 100%;
 }
 
@@ -886,7 +781,11 @@ footer .copy {
   }
 
   header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+
+  header p {
+    font-size: 1.18rem;
   }
 
   .grid {
