@@ -287,13 +287,12 @@ h2 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  gap: 40px;
+  gap: 100px;
 }
 
 .sobre-imagem.desktop {
-  flex: 1 1 400px;
   display: flex;
   justify-content: center;
 }
@@ -344,6 +343,7 @@ h2 {
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
 }
 
 .botao-whats-sobre:hover {
@@ -389,14 +389,11 @@ h2 {
 
   .botao-whats-sobre {
     align-self: center;
+    margin-top: 25px;
   }
 
   .sobre-titulo {
     font-size: 2.2rem;
-  }
-
-  .sobre-desc {
-    font-size: 1.05rem;
   }
 }
 
@@ -535,11 +532,17 @@ h2 {
 }
 
 .diferenciais-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.diferenciais-grid > * {
+  flex: 1 1 370px; 
+  max-width: 580px;
 }
 
 .diferencial-card {
@@ -698,6 +701,14 @@ footer {
   flex-wrap: nowrap;
 }
 
+.footer-rdSociais h4{
+  text-align: center;
+}
+
+.social-icons {
+  justify-content: center;
+}
+
 .logo-footer {
   width: 200px;
 }
@@ -752,6 +763,27 @@ footer .copy {
     display: none;
   }
 
+  .footer-grid {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-col {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer-col p {
+    justify-content: center;
+  }
+
+  footer .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
   .footer-grid {
     flex-direction: column;
     align-items: center;
