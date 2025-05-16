@@ -584,8 +584,6 @@ h2 {
 .contato-section {
   padding: 1rem 1rem;
   background-color: #111827;
-  border-top: 2px solid var(--verde);
-  /* border-bottom: 2px solid var(--verde); */
 }
 
 .contato-content {
