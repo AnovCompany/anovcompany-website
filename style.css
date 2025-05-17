@@ -436,7 +436,7 @@ h2 {
 }
 
 .titulo-servicos span {
-  color: rgb(59, 130, 246); 
+  color: var(--azul); 
 }
 
 .subtitulo-servicos {
