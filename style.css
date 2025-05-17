@@ -277,7 +277,7 @@ h2 {
 
 /* ===== SOBRE ===== */
 .sobre-anov {
-  padding: 80px 20px;
+  padding: 50px 20px;
   background:  #f0f4f8;
   color: var(--preto);
 }
@@ -298,8 +298,8 @@ h2 {
 }
 
 .sobre-imagem.desktop img {
-  width: 300px;
-  height: 300px;
+  width: 290px;
+  height: 290px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -324,6 +324,7 @@ h2 {
   line-height: 1.7;
   color: var(--cinza-escuro);
   margin-bottom: 16px;
+  margin-left: 5px;
 }
 
 .sobre-desc strong {
@@ -334,7 +335,7 @@ h2 {
   display: inline-flex;
   align-self: center;
   justify-content: center;
-  background-color: #219653;
+  background-color: var(--azul);
   color: #fff;
   font-weight: 600;
   font-size: 1rem;
@@ -347,7 +348,7 @@ h2 {
 }
 
 .botao-whats-sobre:hover {
-  background-color: #1e874a;
+  background-color: var(--azul-claro);
   transform: translateY(-2px);
 }
 
@@ -364,7 +365,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1070px) {
   .sobre-container {
     flex-direction: column-reverse;
     text-align: center;
@@ -377,7 +378,6 @@ h2 {
   .sobre-imagem.mobile {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
   }
 
   .sobre-imagem.mobile img {
@@ -680,7 +680,7 @@ h2 {
 footer {
   background: black;
   color: white;
-  padding: 3rem 1.5rem 1rem 1rem;
+  padding: 3rem 1rem 1rem 1rem;
   width: 100%;
 }
 
