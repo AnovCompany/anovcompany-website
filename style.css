@@ -163,7 +163,6 @@ nav .logo {
 }
 
 .hamburger {
-  position: fixed;
   top: 20px;
   right: 20px;
   z-index: 1000;
@@ -807,6 +806,10 @@ footer .copy {
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+  }
+
+  nav {
+    padding: 1rem 1.5rem;
   }
 
   .nav-links {
