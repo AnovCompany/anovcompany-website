@@ -33,7 +33,7 @@ Este site está sendo construído do zero com código puro para oferecer leveza,
 
 Para mais informações ou solicitações de serviços:
 
-📧 Email: contato@anovcompany.com (futuro)
-🌐 Site: https://anovcompany.com (em breve)
+📧 Email: contato@anovcompany.com
+🌐 Site: https://anovcompany.com
 
 © 2025 anovcompany – Inovação que transforma.
